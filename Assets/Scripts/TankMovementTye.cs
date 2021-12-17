@@ -51,16 +51,19 @@ namespace Complete
         private void Update ()
         {
             // Store the value of both input axes.
-            m_MovementInputValue = Input.GetAxis (m_MovementAxisName);
-            m_TurnInputValue = Input.GetAxis (m_TurnAxisName);
+            m_MovementInputValue = Input.GetAxisRaw (m_MovementAxisName);
+            m_TurnInputValue = Input.GetAxisRaw (m_TurnAxisName);
         }
 
 
         private void FixedUpdate ()
         {
-            // Adjust the rigidbodies position and orientation in FixedUpdate.
-            Move ();
-            Turn ();
+            // Adjust the rigidbodies position and orientation in FixedUpdate. Only allows the tank to move if it is not turning
+            if (!Turn())
+            {
+                Move();
+            }
+            
         }
 
 
@@ -74,16 +77,30 @@ namespace Complete
         }
 
 
-        private void Turn ()
+        private bool Turn ()
         {
+            bool hasTurned = false;
+
+            float maxTurnSpeed = m_TurnSpeed * Time.deltaTime;
+
             // Determine the number of degrees to be turned based on the input, speed and time between frames.
             float turn = m_TurnInputValue * m_TurnSpeed * Time.deltaTime;
+
+            // Returns true if the tank is turning
+            if(turn != 0)
+            {
+                hasTurned = true;
+            }
 
             // Make this into a rotation in the y axis.
             Quaternion turnRotation = Quaternion.Euler (0f, turn, 0f);
 
             // Apply this rotation to the rigidbody's rotation.
             m_Rigidbody.MoveRotation (m_Rigidbody.rotation * turnRotation);
+
+            print(m_TurnInputValue);
+
+            return hasTurned;
         }
     }
 }
