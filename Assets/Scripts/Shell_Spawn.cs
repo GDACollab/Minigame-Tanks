@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Shell_Spawn : MonoBehaviour
 {
+
+    // Spawns projectile by end of tank's turrent
+
     public GameObject projetile_postion;
     public List<GameObject> vfx = new List<GameObject>();
 
@@ -17,14 +20,14 @@ public class Shell_Spawn : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        // when mouse button pressed
+        //Condtion is when mouse button pressed
         if(Input.GetMouseButton (0))
         {
             Spawn_vfx();
         }
         
     }
-
+   
     private void Spawn_vfx() 
     {
         GameObject vfx;
