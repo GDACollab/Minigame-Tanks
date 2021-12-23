@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet_Spawn : MonoBehaviour
+public class Shell_Spawn : MonoBehaviour
 {
     public GameObject projetile_postion;
     public List<GameObject> vfx = new List<GameObject>();
