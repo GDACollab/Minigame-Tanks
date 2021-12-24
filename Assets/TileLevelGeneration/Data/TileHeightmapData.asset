@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 219d3beb76b734e7586928b889c5a34a, type: 3}
+  m_Name: TileHeightmapData
+  m_EditorClassIdentifier: 
+  heighmapTileList:
+  - {fileID: 11400000, guid: 713906596861b453aa28a744fb869ff5, type: 2}
+  - {fileID: 11400000, guid: 50929b261cbe14004b435205f063f633, type: 2}
+  - {fileID: 11400000, guid: 147680fa5bccc48ed9efbbd84c32cc7b, type: 2}
+  - {fileID: 11400000, guid: e452699ba730340db91f11f06dcdf33b, type: 2}
+  - {fileID: 11400000, guid: 7c2bd25a3073049ef8f910934b75dc81, type: 2}
+  - {fileID: 11400000, guid: eb9102b3ad30341648853f529b5c4ace, type: 2}
+  - {fileID: 11400000, guid: 99b6becc2a3f345438e02e94e189caf1, type: 2}
+  - {fileID: 11400000, guid: 2884f924260af4bb39c13c76c27514c7, type: 2}
+  - {fileID: 11400000, guid: 5cd6d1c56efdd484ab38005623eb2c2c, type: 2}
+  - {fileID: 11400000, guid: af9bc3a8717ce40c3839ee037a2c1e03, type: 2}
+  - {fileID: 11400000, guid: e11939b8e93c54ca4a5eaa537daffe18, type: 2}
+  minHieght: 1
+  maxHieght: 3

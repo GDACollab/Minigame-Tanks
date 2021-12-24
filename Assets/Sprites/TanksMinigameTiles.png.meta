@@ -1,0 +1,492 @@
+fileFormatVersion: 2
+guid: 078dec8e7cc6c4547ac83bdfecfb74bd
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7214568730225895797
+    second: TanksMinigameTiles_0
+  - first:
+      213: 3063488117592828460
+    second: TanksMinigameTiles_1
+  - first:
+      213: 3834329925609554859
+    second: TanksMinigameTiles_2
+  - first:
+      213: 7891269664202139409
+    second: TanksMinigameTiles_3
+  - first:
+      213: -6917123898487163053
+    second: TanksMinigameTiles_4
+  - first:
+      213: 3217121763415623188
+    second: TanksMinigameTiles_5
+  - first:
+      213: -6563430704970085896
+    second: TanksMinigameTiles_6
+  - first:
+      213: -1054520238826493367
+    second: TanksMinigameTiles_7
+  - first:
+      213: 5591780364451130789
+    second: TanksMinigameTiles_8
+  - first:
+      213: -4488313905590834784
+    second: TanksMinigameTiles_9
+  - first:
+      213: -88155409488281392
+    second: TanksMinigameTiles_10
+  - first:
+      213: 1578535900165915663
+    second: TanksMinigameTiles_11
+  - first:
+      213: -3812897871298874459
+    second: TanksMinigameTiles_12
+  - first:
+      213: 7596509166038583022
+    second: TanksMinigameTiles_13
+  - first:
+      213: -382298614432145912
+    second: TanksMinigameTiles_14
+  - first:
+      213: 5709452299069413255
+    second: TanksMinigameTiles_15
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 128
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TanksMinigameTiles_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 400.5
+        width: 133.5
+        height: 133.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57961c4290c4f1460800000000000000
+      internalID: 7214568730225895797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TanksMinigameTiles_1
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 400.5
+        width: 133.5
+        height: 133.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2a20ce3632b38a20800000000000000
+      internalID: 3063488117592828460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TanksMinigameTiles_2
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 400.5
+        width: 133.5
+        height: 133.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba38b9f80c6463530800000000000000
+      internalID: 3834329925609554859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TanksMinigameTiles_3
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 400.5
+        width: 133.5
+        height: 133.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 117a59923fb638d60800000000000000
+      internalID: 7891269664202139409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TanksMinigameTiles_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 267.5
+        width: 133.5
+        height: 133.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 357be4b76707100a0800000000000000
+      internalID: -6917123898487163053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TanksMinigameTiles_5
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 267.5
+        width: 133.5
+        height: 133.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4160193e23385ac20800000000000000
+      internalID: 3217121763415623188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TanksMinigameTiles_6
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 267.5
+        width: 133.5
+        height: 133.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f9cd526c820ae4a0800000000000000
+      internalID: -6563430704970085896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TanksMinigameTiles_7
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 267.5
+        width: 133.5
+        height: 133.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94a694c0e679d51f0800000000000000
+      internalID: -1054520238826493367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TanksMinigameTiles_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 134.5
+        width: 133.5
+        height: 133.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ad2d1d6d9ef99d40800000000000000
+      internalID: 5591780364451130789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TanksMinigameTiles_9
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 134.5
+        width: 133.5
+        height: 133.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a9efc0784e46b1c0800000000000000
+      internalID: -4488313905590834784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TanksMinigameTiles_10
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 134.5
+        width: 133.5
+        height: 133.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d00c644f1fc6cef0800000000000000
+      internalID: -88155409488281392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TanksMinigameTiles_11
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 134.5
+        width: 133.5
+        height: 133.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f04479aa90618e510800000000000000
+      internalID: 1578535900165915663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TanksMinigameTiles_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1.5
+        width: 133.5
+        height: 133.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a33360769dd51bc0800000000000000
+      internalID: -3812897871298874459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TanksMinigameTiles_13
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 1.5
+        width: 133.5
+        height: 133.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee68ab6a6d83c6960800000000000000
+      internalID: 7596509166038583022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TanksMinigameTiles_14
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 1.5
+        width: 133.5
+        height: 133.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80ed5a88f6dc1baf0800000000000000
+      internalID: -382298614432145912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TanksMinigameTiles_15
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 1.5
+        width: 133.5
+        height: 133.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 787d114bd9c0c3f40800000000000000
+      internalID: 5709452299069413255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: a5b2fe989a978459ebac48dcec6a9626
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -13,6 +13,9 @@ namespace TileLevelGeneration
 
         [Tooltip("GameObject to be spawned where this tileBase appears in the tilemap")]
         public GameObject toSpawn;
+
+        [Tooltip("Rotation to put on toSpawn")]
+        public Vector3 rotation;
     }
 }
 

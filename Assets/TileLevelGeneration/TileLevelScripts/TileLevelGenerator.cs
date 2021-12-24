@@ -8,41 +8,54 @@ namespace TileLevelGeneration
     public class TileLevelGenerator : MonoBehaviour
     {
         private TileLevelManager tileLevelManager;
-        private Tilemap tilemap;
+        private Tilemap objectTilemap;
+        private Tilemap heightTilemap;
 
         private Vector3 objectOffset;
 
+        private Dictionary<Vector3Int, TileObject> tileObjectDictionary
+            = new Dictionary<Vector3Int, TileObject>();
+
         public void Construct(TileLevelManager tileLevelManager
-            , Tilemap tilemap)
+            , Tilemap objectTilemap
+            , Tilemap heightTilemap)
         {
             this.tileLevelManager = tileLevelManager;
-            this.tilemap = tilemap;
+            this.objectTilemap = objectTilemap;
+            this.heightTilemap = heightTilemap;
 
-            // objectOffset since CellToWorld strangely isn't at the center of the tile
-            Vector3 tileSize = tilemap.cellSize;
+            // objectOffset since CellToWorld doesn't return the center of the tile
+            Vector3 tileSize = objectTilemap.cellSize;
             objectOffset = new Vector3(tileSize.x * 0.5f, 0
                 , tileSize.y * 0.5f);
 
             FillTiles();
+
+            MapTileObjectHeights();
         }
 
         private void FillTiles()
         {
             foreach (Vector3Int tilePosition in
-                tilemap.cellBounds.allPositionsWithin)
+                objectTilemap.cellBounds.allPositionsWithin)
             {
-                if (tilemap.HasTile(tilePosition))
+                if (objectTilemap.HasTile(tilePosition))
                 {
-                    Vector3 worldPosition = tilemap.CellToWorld(tilePosition);
+                    Vector3 worldPosition = objectTilemap.CellToWorld(tilePosition) + objectOffset;
 
                     TileData tileData = tileLevelManager.GetTileData(tilePosition);
 
                     if (tileData != null)
                     {
                         GameObject tileObject = tileData.toSpawn;
-                        if(tileObject != null)
+
+                        Quaternion rotation = Quaternion.Euler(tileData.rotation);
+                        if (tileObject != null)
                         {
-                            Instantiate(tileObject, worldPosition + objectOffset, Quaternion.identity);
+                            GameObject thisObject = Instantiate(tileObject, worldPosition, rotation);
+                            TileObject thisTileObject = thisObject.GetComponent<TileObject>();
+
+                            tileObjectDictionary.Add(tilePosition, thisTileObject);
                         }
                     }
                     else
@@ -50,6 +63,35 @@ namespace TileLevelGeneration
                         Debug.LogError(this + " Error: Cannot find TileData" +
                             " for tile at world position " + worldPosition);
                     }
+                }
+            }
+        }
+
+        private void MapTileObjectHeights()
+        {
+            foreach (Vector3Int tilePosition in
+                heightTilemap.cellBounds.allPositionsWithin)
+            {
+                if (heightTilemap.HasTile(tilePosition))
+                {
+                    Vector3 worldPosition = heightTilemap.CellToWorld(tilePosition) + objectOffset;
+
+                    if (!tileObjectDictionary.ContainsKey(tilePosition))
+                    {
+                        Debug.LogWarning(this + " Warning: Heightmap tile at world position "
+                            + worldPosition + " has no TileObject");
+                        continue;
+                    }
+
+                    float thisHeight = tileLevelManager.GetHeightmapHeight(tilePosition);
+
+                    Transform thisMeshTransform = tileObjectDictionary[tilePosition]
+                        .meshTransform;
+
+                    Vector3 originalScale = thisMeshTransform.localScale;
+
+                    thisMeshTransform.localScale = new Vector3(originalScale.x,
+                        originalScale.y * thisHeight , originalScale.y);
                 }
             }
         }
