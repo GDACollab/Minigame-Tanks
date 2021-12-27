@@ -15,3 +15,5 @@ MonoBehaviour:
   tileBase: {fileID: 11400000, guid: b66828b4414044ad28ebc8727112b574, type: 2}
   toSpawn: {fileID: 876221808044203823, guid: 9cf3d2cb7ee854e4a99e419428287e1f, type: 3}
   rotation: {x: 0, y: 180, z: 0}
+  overrideMeshColor: 0
+  meshColor: {r: 0, g: 0, b: 0, a: 0}

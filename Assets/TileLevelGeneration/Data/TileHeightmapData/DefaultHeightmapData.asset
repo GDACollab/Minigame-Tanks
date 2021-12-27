@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 219d3beb76b734e7586928b889c5a34a, type: 3}
-  m_Name: TileHeightmapData
+  m_Name: DefaultHeightmapData
   m_EditorClassIdentifier: 
   heighmapTileList:
   - {fileID: 11400000, guid: 713906596861b453aa28a744fb869ff5, type: 2}

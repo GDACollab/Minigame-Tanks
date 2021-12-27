@@ -1,4 +1,4 @@
-using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
@@ -9,6 +9,7 @@ namespace TileLevelGeneration
     {
         private Tilemap objectTilemap;
         private Tilemap heightTilemap;
+        private Tilemap colorTilemap;
 
         private TileLevelGenerator tileLevelGenerator;
 
@@ -22,26 +23,39 @@ namespace TileLevelGeneration
         [Tooltip("TileHeightmapData used in this level")]
         [SerializeField] private TileHeightmapData tileHeightmapData;
 
+        [Tooltip("List of all tileColorData used in this level")]
+        [SerializeField] private List<TileColorData> tileColorDataList
+            = new List<TileColorData>();
+
         private Dictionary<TileBase, TileData> tileDataDictionary
             = new Dictionary<TileBase, TileData>();
 
         private Dictionary<TileBase, float> tileHeightmapDictionary
             = new Dictionary<TileBase, float>();
 
+        private Dictionary<TileBase, Color> tileColorDictionary
+            = new Dictionary<TileBase, Color>();
+
+        private Dictionary<Vector3Int, Color> positionColorDictionary
+            = new Dictionary<Vector3Int, Color>();
+
         private void Awake()
         {
             objectTilemap = GameObject.Find("ObjectTilemap").GetComponent<Tilemap>();
             heightTilemap = GameObject.Find("HeightTilemap").GetComponent<Tilemap>();
+            colorTilemap = GameObject.Find("ColorTilemap").GetComponent<Tilemap>();
 
             objectTilemap.GetComponent<TilemapRenderer>().enabled = enableTilemapRenderer;
             heightTilemap.GetComponent<TilemapRenderer>().enabled = enableTilemapRenderer;
+            colorTilemap.GetComponent<TilemapRenderer>().enabled = enableTilemapRenderer;
 
             ConstructTileDataDictionary();
             ConstructHieghtmapDataDictionary();
-
+            ConstructTileColorDictionary();
+            ConstructPositionColorDictionary();
 
             tileLevelGenerator = GetComponent<TileLevelGenerator>();
-            tileLevelGenerator.Construct(this, objectTilemap, heightTilemap);
+            tileLevelGenerator.Construct(this, objectTilemap, heightTilemap, positionColorDictionary);
         }
 
         private void ConstructTileDataDictionary()
@@ -79,25 +93,51 @@ namespace TileLevelGeneration
             }
         }
 
+        private void ConstructTileColorDictionary()
+        {
+            foreach (TileColorData tileColorData in tileColorDataList)
+            {
+                tileColorDictionary.Add(tileColorData.tileBase, tileColorData.objectColor);
+            }
+        }
+
+        private void ConstructPositionColorDictionary()
+        {
+            colorTilemap.MapAllOccupiedTiles((tilePosition) =>
+            {
+                Color color = GetTileColor(tilePosition);
+                positionColorDictionary.Add(tilePosition, color);
+            });
+        }
+
+        public T GetDataFromTilePosition<T>(Dictionary <TileBase, T> dictionary
+            , Tilemap tilemap, Vector3Int position, T defualtReturn)
+        {
+            TileBase tile = tilemap.GetTile(position);
+            if (tile == null)
+            {
+                Debug.LogWarning(this + " Warning: No " + typeof(T) + " at tile position " + position);
+                return defualtReturn;
+            }
+            return dictionary[tile];
+        }
+
         public TileData GetTileData(Vector3Int position)
         {
-            TileBase tile = objectTilemap.GetTile(position);
-            if(tile == null)
-            {
-                Debug.LogError(this + " Error: No object tile at tile position " + position);
-            }
-            return tileDataDictionary[tile];
+            return GetDataFromTilePosition(tileDataDictionary,
+                objectTilemap, position, null);
         }
 
         public float GetHeightmapHeight(Vector3Int position)
         {
-            TileBase tile = heightTilemap.GetTile(position);
-            if (tile == null)
-            {
-                Debug.LogWarning(this + " Warning: No hieghtmap tile at tile position " + position);
-                return tileHeightmapData.minHieght;
-            }
-            return tileHeightmapDictionary[tile];
+            return GetDataFromTilePosition(tileHeightmapDictionary,
+                heightTilemap, position, tileHeightmapData.minHieght);
+        }
+
+        public Color GetTileColor(Vector3Int position)
+        {
+            return GetDataFromTilePosition(tileColorDictionary,
+                colorTilemap, position, Color.white);
         }
     }
 }

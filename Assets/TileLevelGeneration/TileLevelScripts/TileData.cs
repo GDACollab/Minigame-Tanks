@@ -16,6 +16,12 @@ namespace TileLevelGeneration
 
         [Tooltip("Rotation to put on toSpawn")]
         public Vector3 rotation;
+
+        //[Tooltip("True to set toSpawn's mesh material color to meshColor")]
+        //public bool overrideMeshColor;
+
+        //[Tooltip("Color to set on toSpawn's mesh")]
+        //public Color meshColor;
     }
 }
 

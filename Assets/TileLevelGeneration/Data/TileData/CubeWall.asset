@@ -14,3 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tileBase: {fileID: 11400000, guid: fe094094caa564ab1b6ded9937667aa0, type: 2}
   toSpawn: {fileID: 1677755720894894500, guid: b9ef668e274624fb7a14ba3391ad33d1, type: 3}
+  rotation: {x: 0, y: 0, z: 0}
+  overrideMeshColor: 0
+  meshColor: {r: 0, g: 0, b: 0, a: 0}
