@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TankMovementCCTye : MonoBehaviour{ // to implement an expected tank control scheme where keys a & d rotate the tank we will manipulate given pieces of data so that we can fulfill said functionality.
+public class TankMovementCC : MonoBehaviour{ // to implement an expected tank control scheme where keys a & d rotate the tank we will manipulate given pieces of data so that we can fulfill said functionality.
     private CharacterController controller;
     private Vector3 playerMovement; 
     private float inputX; // +-1 = w/s pushed 0 = w/s not pushed

@@ -2,10 +2,11 @@
 
 namespace Complete
 {
-    public class TankMovementTye : MonoBehaviour
+    public class TankMovement : MonoBehaviour
     {
         public float m_Speed = 12f;                 // How fast the tank moves forward and back.
         public float m_TurnSpeed = 180f;            // How fast the tank turns in degrees per second.
+        public float m_PlayerNumber = 1;            // Player Identifier
 
 
         private string m_MovementAxisName;          // The name of the input axis for moving forward and back.
@@ -43,8 +44,8 @@ namespace Complete
         private void Start ()
         {
             // The axes names are based on player number.
-            m_MovementAxisName = "Vertical";
-            m_TurnAxisName = "Horizontal";
+            m_MovementAxisName = "Vertical" + m_PlayerNumber;
+            m_TurnAxisName = "Horizontal" + m_PlayerNumber;
         }
 
 
