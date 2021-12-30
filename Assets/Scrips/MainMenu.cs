@@ -1,0 +1,18 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class MainMenu : MonoBehaviour
+{
+    // info learned from following youtube video https://www.youtube.com/watch?v=zc8ac_qUXQY
+    public void play() {
+        SceneManager.LoadScene("SampleScene.unity");
+    }
+
+    public void quit()
+    {
+        Debug.Log("Quit!");
+        Application.Quit();
+    }
+}
