@@ -95,8 +95,11 @@ namespace TileLevelGeneration
             foreach(KeyValuePair<Vector3Int, TileObject> positionObjectPair
                 in tileObjectDictionary)
             {
-                Color color = positionColorDictionary[positionObjectPair.Key];
-                positionObjectPair.Value.SetColor(color);
+                if(positionColorDictionary.ContainsKey(positionObjectPair.Key))
+                {
+                    Color color = positionColorDictionary[positionObjectPair.Key];
+                    positionObjectPair.Value.SetColor(color);
+                }
             }
         }
     }
