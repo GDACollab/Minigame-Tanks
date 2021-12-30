@@ -21,7 +21,7 @@ public class Shell_Spawn : MonoBehaviour
     private void Update()
     {
         //Condtion is when mouse button pressed
-        if(Input.GetMouseButton (0))
+        if(Input.GetMouseButtonDown(0))
         {
             Spawn_vfx();
         }
