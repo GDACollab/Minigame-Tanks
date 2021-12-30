@@ -7,7 +7,8 @@ public class MainMenu : MonoBehaviour
 {
     // info learned from following youtube video https://www.youtube.com/watch?v=zc8ac_qUXQY
     public void play() {
-        SceneManager.LoadScene("SampleScene.unity");
+        Debug.Log("Play");
+        SceneManager.LoadScene("SampleScene");
     }
 
     public void quit()
