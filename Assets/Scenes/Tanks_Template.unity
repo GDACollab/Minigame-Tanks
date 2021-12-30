@@ -142,6 +142,25 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &495654551 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1133583135976865734, guid: f688ccb7b7e751f4ba44dfdde96abbfb, type: 3}
+  m_PrefabInstance: {fileID: 8778076058375840213}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &495654552
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 495654551}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!1 &682067332 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6152293727158371051, guid: f688ccb7b7e751f4ba44dfdde96abbfb, type: 3}
@@ -462,7 +481,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -476746044771901990, guid: e0125c4c2ba1f56429e6792538a43cfa, type: 3}
 --- !u!1 &3797140769938396010 stripped
@@ -481,7 +500,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -476746044771901990, guid: e0125c4c2ba1f56429e6792538a43cfa, type: 3}
 --- !u!54 &3797140769938396015
@@ -516,7 +535,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 5935995247673755541, guid: e0125c4c2ba1f56429e6792538a43cfa, type: 3}
 --- !u!1 &7134906447379177024 stripped
@@ -535,7 +554,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -476746044771901990, guid: e0125c4c2ba1f56429e6792538a43cfa, type: 3}
 --- !u!54 &7134906447379177029
@@ -561,6 +580,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1817801736135229193, guid: 8836074d366f65e48a571ca7af266cfd, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5829815187714172607, guid: 8836074d366f65e48a571ca7af266cfd, type: 3}
       propertyPath: m_Interpolate
       value: 0
@@ -617,7 +640,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tank_1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1400093969063618422, guid: 8836074d366f65e48a571ca7af266cfd, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8836074d366f65e48a571ca7af266cfd, type: 3}
 --- !u!1001 &8778076058375840213
 PrefabInstance:
