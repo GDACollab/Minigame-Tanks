@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3576ba2a387d74e61a3bd3027bcd994d, type: 3}
+  m_Name: RedColorData
+  m_EditorClassIdentifier: 
+  tileBase: {fileID: 11400000, guid: f163c41920ce5458ea0a0fe39b5bd6df, type: 2}
+  objectColor: {r: 1, g: 0.10980393, b: 0.14117648, a: 1}
