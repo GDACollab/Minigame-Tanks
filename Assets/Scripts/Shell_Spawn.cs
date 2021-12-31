@@ -9,11 +9,12 @@ public class Shell_Spawn : MonoBehaviour
 
     public GameObject projetile_postion;
     public List<GameObject> vfx = new List<GameObject>();
-
+    public Transform m_Fire_transform;
     private GameObject effectToSpawn;
 
    private void Start()
     {
+        m_Fire_transform = GetComponent<Transform>();
         effectToSpawn = vfx[0];
     }
 
@@ -34,7 +35,9 @@ public class Shell_Spawn : MonoBehaviour
 
         if (effectToSpawn != null)
         {
-            vfx = Instantiate(effectToSpawn, projetile_postion.transform.position, Quaternion.identity);
+            Vector3 spawPos = projetile_postion.transform.position;
+            Quaternion spawnRot = m_Fire_transform.rotation;
+            vfx = Instantiate(effectToSpawn, spawPos, spawnRot);
 
         }
         else

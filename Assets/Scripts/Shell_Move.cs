@@ -18,8 +18,7 @@ public class Shell_Move : MonoBehaviour
     {
         if (speed != 0) 
         {
-            transform.position += transform.forward * (speed * Time.deltaTime);
-
+           transform.position += transform.forward * (speed * Time.deltaTime);
         
         } else { Debug.Log("Speed is zero"); }
     }
