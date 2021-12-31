@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Audio;
 
 namespace Complete
 {
@@ -16,10 +17,13 @@ namespace Complete
         private float m_TurnInputValue;             // The current value of the turn input.
         private float m_OriginalPitch;              // The pitch of the audio source at the start of the scene.
 
+        private AudioSource MoveSFX;                  // Audio for Tank Movement
+
 
         private void Awake ()
         {
             m_Rigidbody = GetComponent<Rigidbody> ();
+            MoveSFX = GetComponent<AudioSource> ();
         }
 
 
@@ -63,6 +67,7 @@ namespace Complete
             if (!Turn())
             {
                 Move();
+                Debug.Log("Hi!");
             }
             
         }
