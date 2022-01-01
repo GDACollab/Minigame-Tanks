@@ -20,6 +20,7 @@ public class MainMenu : MonoBehaviour
     public void quit()
     {
         Debug.Log("Quit!");
+        PlayerPrefs.DeleteKey("Vol");
         Application.Quit();
     }
 }

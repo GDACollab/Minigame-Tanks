@@ -17,13 +17,16 @@ namespace Complete
         private float m_TurnInputValue;             // The current value of the turn input.
         private float m_OriginalPitch;              // The pitch of the audio source at the start of the scene.
 
-        private AudioSource MoveSFX;                  // Audio for Tank Movement
+        private AudioSource MoveSFX1;                  // Audio for Tank 1 Movement
+        private AudioSource MoveSFX2;                  // Audio for Tank 2 Movement
+        public AudioClip move;
 
 
         private void Awake ()
         {
-            m_Rigidbody = GetComponent<Rigidbody> ();
-            MoveSFX = GetComponent<AudioSource> ();
+            m_Rigidbody = GetComponent<Rigidbody> ();   
+            MoveSFX1 = GetComponent<AudioSource>();
+            MoveSFX2 = GetComponent<AudioSource>();
         }
 
 
@@ -58,6 +61,16 @@ namespace Complete
             // Store the value of both input axes.
             m_MovementInputValue = Input.GetAxisRaw (m_MovementAxisName);
             m_TurnInputValue = Input.GetAxisRaw (m_TurnAxisName);
+
+            // Sound for tank movement
+            if (!MoveSFX1.isPlaying && (m_MovementInputValue != 0 || m_TurnInputValue != 0))
+            {
+                MoveSFX1.Play();
+            }
+            else if (m_MovementInputValue == 0 && m_TurnInputValue == 0)
+            {
+                MoveSFX1.Stop();
+            }
         }
 
 
@@ -67,7 +80,6 @@ namespace Complete
             if (!Turn())
             {
                 Move();
-                Debug.Log("Hi!");
             }
             
         }

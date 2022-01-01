@@ -17,7 +17,10 @@ public class OptionsMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       
+        if (PlayerPrefs.HasKey("Vol"))
+        {
+            SFXAudio.volume = PlayerPrefs.GetFloat("Vol");
+        }
     }
 
     // Update is called once per frame
@@ -30,6 +33,11 @@ public class OptionsMenu : MonoBehaviour
     public void SetSFXVolume(float Volume)
     {
         SFXAudio = GetComponent<AudioSource>();
+        SFXAudio.volume = SFXVolumeSlider.value;
+                
+        // save playerprefs
+        PlayerPrefs.SetFloat("Vol", SFXAudio.volume);
+        SFXVolumeSlider.value = PlayerPrefs.GetFloat("Vol");
         SFXAudio.volume = SFXVolumeSlider.value;
     }
 
@@ -53,6 +61,7 @@ public class OptionsMenu : MonoBehaviour
 
     public void MainMenu()
     {
+        // Switch to main menu scene
         SceneManager.LoadScene("Menu");
     }
 }

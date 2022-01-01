@@ -9,7 +9,7 @@ public class TankMovementCC : MonoBehaviour{ // to implement an expected tank co
     private float inputZ; // +-1 = a/d pushed 0 = a/d not pushed
     private float playerSpeed = 12.0f;
     private float playerRotation = 180f;
-
+    
     void Start(){
         controller = gameObject.AddComponent<CharacterController>();
     }
@@ -18,6 +18,11 @@ public class TankMovementCC : MonoBehaviour{ // to implement an expected tank co
     void Update(){
         inputX = Input.GetAxis("Horizontal"); // check for x axis keystroke
         inputZ = Input.GetAxis("Vertical"); // check for y axis keystroke
+
+        if (inputX != 0)
+        {
+            Debug.Log("HI");
+        }
     }
 
     private void FixedUpdate(){ // run movement script on a fixed update schedule
