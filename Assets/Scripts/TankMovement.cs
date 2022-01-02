@@ -24,6 +24,9 @@ namespace Complete
         {
             m_Rigidbody = GetComponent<Rigidbody> ();   
             MoveSFX = GetComponent<AudioSource>();
+
+            // sets volume for tank movement
+            MoveSFX.volume = OptionsMenu.TankMovementVolume;
         }
 
 

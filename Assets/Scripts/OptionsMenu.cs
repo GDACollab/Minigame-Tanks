@@ -7,7 +7,9 @@ using UnityEngine.Audio;
 
 public class OptionsMenu : MonoBehaviour
 {
-    [SerializeField] Slider SFXVolumeSlider;
+    [SerializeField] public Slider SFXVolumeSlider;
+
+    static public float TankMovementVolume;
     private AudioSource SFXAudio;
 
     // Components of each SFX
@@ -23,11 +25,10 @@ public class OptionsMenu : MonoBehaviour
             // iterates through each SFX slider & sets it to value set it was set to in the previous session
             foreach (var go in GO)
             {
-                Debug.Log(go.name);
-                Slider Slider = go.GetComponent<Slider>();
-                AudioSource SliderAudio = go.GetComponent<AudioSource>();
                 if (PlayerPrefs.HasKey(go.name + "Vol"))
                 {
+                    Slider Slider = go.GetComponent<Slider>();
+                    AudioSource SliderAudio = go.GetComponent<AudioSource>();
                     SliderAudio.volume = PlayerPrefs.GetFloat(go.name + "Vol");
                     Slider.value = SliderAudio.volume;
                 }
@@ -47,11 +48,10 @@ public class OptionsMenu : MonoBehaviour
         SFXAudio = GetComponent<AudioSource>();
         SFXAudio.volume = SFXVolumeSlider.value;
                 
-        // save playerprefs
+        // save playerprefs & value for float TankMovementVolume
         PlayerPrefs.SetFloat(gameObject.name + "Vol", SFXAudio.volume);
-        Debug.Log("Saved value for: " + gameObject.name + "Vol");
         SFXVolumeSlider.value = SFXAudio.volume;
-
+        TankMovementVolume = SFXAudio.volume;
     }
 
     // Toggles SFX Settings
