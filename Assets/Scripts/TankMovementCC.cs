@@ -18,11 +18,6 @@ public class TankMovementCC : MonoBehaviour{ // to implement an expected tank co
     void Update(){
         inputX = Input.GetAxis("Horizontal"); // check for x axis keystroke
         inputZ = Input.GetAxis("Vertical"); // check for y axis keystroke
-
-        if (inputX != 0)
-        {
-            Debug.Log("HI");
-        }
     }
 
     private void FixedUpdate(){ // run movement script on a fixed update schedule

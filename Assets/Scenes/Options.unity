@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 49160044}
   - component: {fileID: 49160047}
   m_Layer: 5
-  m_Name: Button
+  m_Name: SFX_Tank_Movement_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -752,6 +752,7 @@ RectTransform:
   - {fileID: 1972722727}
   - {fileID: 391067744}
   - {fileID: 1830109386}
+  - {fileID: 744805495}
   - {fileID: 1457864067}
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -868,8 +869,8 @@ RectTransform:
   m_Children:
   - {fileID: 720955168}
   - {fileID: 1346768213}
-  m_Father: {fileID: 1457864067}
-  m_RootOrder: 0
+  m_Father: {fileID: 565151820}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -998,8 +999,8 @@ GameObject:
   - component: {fileID: 967468752}
   - component: {fileID: 967468753}
   m_Layer: 5
-  m_Name: Slider
-  m_TagString: Untagged
+  m_Name: SFX_Tank_Movement_Slider
+  m_TagString: SFXSliders
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1209,7 +1210,7 @@ GameObject:
   - component: {fileID: 1169167992}
   - component: {fileID: 1169167993}
   m_Layer: 5
-  m_Name: SFX_Tank_movement
+  m_Name: SFX_Tank_Movement
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1230,7 +1231,7 @@ RectTransform:
   - {fileID: 967468755}
   - {fileID: 49160043}
   m_Father: {fileID: 1457864067}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1375,7 +1376,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1457864067}
   m_Layer: 5
-  m_Name: SFX
+  m_Name: SFXs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1392,10 +1393,9 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 744805495}
   - {fileID: 1169167992}
   m_Father: {fileID: 565151820}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1640,7 +1640,7 @@ GameObject:
   - component: {fileID: 1929521921}
   - component: {fileID: 1929521920}
   m_Layer: 5
-  m_Name: Text
+  m_Name: SFX_Tank_Movement_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

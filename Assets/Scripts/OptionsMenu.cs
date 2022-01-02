@@ -10,16 +10,28 @@ public class OptionsMenu : MonoBehaviour
     [SerializeField] Slider SFXVolumeSlider;
     private AudioSource SFXAudio;
 
-    private Text SFXText;
+    // Components of each SFX
     private Slider SFXSlider;
     private Button SFXButton;
 
     // Start is called before the first frame update
     void Start()
     {
-        if (PlayerPrefs.HasKey("Vol"))
+        var GO = GameObject.FindGameObjectsWithTag("SFXSliders");
+        if (GO.Length > 0)
         {
-            SFXAudio.volume = PlayerPrefs.GetFloat("Vol");
+            // iterates through each SFX slider & sets it to value set it was set to in the previous session
+            foreach (var go in GO)
+            {
+                Debug.Log(go.name);
+                Slider Slider = go.GetComponent<Slider>();
+                AudioSource SliderAudio = go.GetComponent<AudioSource>();
+                if (PlayerPrefs.HasKey(go.name + "Vol"))
+                {
+                    SliderAudio.volume = PlayerPrefs.GetFloat(go.name + "Vol");
+                    Slider.value = SliderAudio.volume;
+                }
+            }
         }
     }
 
@@ -36,16 +48,15 @@ public class OptionsMenu : MonoBehaviour
         SFXAudio.volume = SFXVolumeSlider.value;
                 
         // save playerprefs
-        PlayerPrefs.SetFloat("Vol", SFXAudio.volume);
-        SFXVolumeSlider.value = PlayerPrefs.GetFloat("Vol");
-        SFXAudio.volume = SFXVolumeSlider.value;
+        PlayerPrefs.SetFloat(gameObject.name + "Vol", SFXAudio.volume);
+        Debug.Log("Saved value for: " + gameObject.name + "Vol");
+        SFXVolumeSlider.value = SFXAudio.volume;
+
     }
 
     // Toggles SFX Settings
     public void SFXToggle() 
     {
-        SFXText = GetComponent<Text>();
-
         // Gets Slider component & disables/enables it, 
         // muting/unmuting its respective SFX
         SFXSlider = GetComponentInChildren<Slider>();
