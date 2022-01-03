@@ -26,7 +26,13 @@ namespace Complete
             MoveSFX = GetComponent<AudioSource>();
 
             // sets volume for tank movement
-            MoveSFX.volume = OptionsMenu.TankMovementVolume;
+            if (OptionsMenu.Default == true) {
+                MoveSFX.volume = 1;
+            }
+            else
+            {
+                MoveSFX.volume = OptionsMenu.TankMovementVolume;
+            }
         }
 
 

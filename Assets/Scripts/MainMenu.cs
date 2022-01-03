@@ -20,7 +20,14 @@ public class MainMenu : MonoBehaviour
     public void quit()
     {
         Debug.Log("Quit!");
-        PlayerPrefs.DeleteKey("Vol");
+        var GO = GameObject.FindGameObjectsWithTag("SFXSliders");
+        foreach (var go in GO)
+            {
+                if (PlayerPrefs.HasKey(go.name + "Vol"))
+                {
+                    PlayerPrefs.DeleteKey(go.name + "Vol");
+                }
+            }
         Application.Quit();
     }
 }

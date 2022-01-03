@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - SFXSliders
+  - SFXTestButtons
   layers:
   - Default
   - TransparentFX

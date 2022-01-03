@@ -9,7 +9,8 @@ public class OptionsMenu : MonoBehaviour
 {
     [SerializeField] public Slider SFXVolumeSlider;
 
-    static public float TankMovementVolume;
+    static public float TankMovementVolume = 1;
+    static public bool Default = true;
     private AudioSource SFXAudio;
 
     // Components of each SFX
@@ -19,21 +20,26 @@ public class OptionsMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        var GO = GameObject.FindGameObjectsWithTag("SFXSliders");
-        if (GO.Length > 0)
+        var SliderGO = GameObject.FindGameObjectsWithTag("SFXSliders");
+        if (Default == false)
         {
             // iterates through each SFX slider & sets it to value set it was set to in the previous session
-            foreach (var go in GO)
+            foreach (var go in SliderGO)
             {
+                Slider Slider = go.GetComponent<Slider>();
+                AudioSource SliderAudio = go.GetComponent<AudioSource>();
                 if (PlayerPrefs.HasKey(go.name + "Vol"))
                 {
-                    Slider Slider = go.GetComponent<Slider>();
-                    AudioSource SliderAudio = go.GetComponent<AudioSource>();
                     SliderAudio.volume = PlayerPrefs.GetFloat(go.name + "Vol");
                     Slider.value = SliderAudio.volume;
                 }
-            }
-        }
+                else
+                {
+                    SliderAudio.volume = 1;
+                    Slider.value = SliderAudio.volume;
+                }
+            } 
+        } 
     }
 
     // Update is called once per frame
@@ -52,6 +58,7 @@ public class OptionsMenu : MonoBehaviour
         PlayerPrefs.SetFloat(gameObject.name + "Vol", SFXAudio.volume);
         SFXVolumeSlider.value = SFXAudio.volume;
         TankMovementVolume = SFXAudio.volume;
+        Default = false;
     }
 
     // Toggles SFX Settings
