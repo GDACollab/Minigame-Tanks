@@ -6,15 +6,28 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     // info learned from following youtube video https://www.youtube.com/watch?v=zc8ac_qUXQY
-    public void play() {
-        Debug.Log("Play");
-        SceneManager.LoadScene(1);
+    public void playBlankMap() {
+        SceneManager.LoadScene("Tanks_Template");
     }
 
     public void options()
     {
-        Debug.Log("Options");
         SceneManager.LoadScene("Options");
+    }
+
+    public void playPinPoint()
+    {
+        SceneManager.LoadScene("PinpointMap");
+    }
+
+    public void playTileLevel()
+    {
+        SceneManager.LoadScene("TileLevelTest");
+    }
+
+    public void playTrainingMap()
+    {
+        SceneManager.LoadScene("Training_Map");
     }
 
     public void quit()

@@ -9,13 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 18034948e859164488b92b1d28a73c84
   - enabled: 1
-<<<<<<< Updated upstream
-    path: Assets/Scenes/Tanks_Template.unity
-    guid: 970907d53388dec4fa6cde4be90e7f79
-  - enabled: 1
-    path: Assets/Scenes/Options.unity
-    guid: bf0cdf812e60cda46a47a2f9063f1198
-=======
     path: Assets/Scenes/Options.unity
     guid: bf0cdf812e60cda46a47a2f9063f1198
   - enabled: 1
@@ -30,5 +23,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Training_Map.unity
     guid: 40cbb0f33f39a7f40b8450e361e7873e
->>>>>>> Stashed changes
   m_configObjects: {}

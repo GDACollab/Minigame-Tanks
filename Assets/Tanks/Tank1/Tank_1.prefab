@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 9140800345870884799}
   - component: {fileID: 1318590872298120516}
   - component: {fileID: 2695345600969019511}
+  - component: {fileID: 2043136577573229889}
   m_Layer: 0
   m_Name: TankTurret
   m_TagString: Untagged
@@ -81,6 +82,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &2043136577573229889
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1217991534319836164}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -476746044771901990, guid: e0125c4c2ba1f56429e6792538a43cfa, type: 3}
 --- !u!1 &5138972409879843118
 GameObject:
   m_ObjectHideFlags: 0
@@ -92,6 +107,7 @@ GameObject:
   - component: {fileID: 6738851429281356198}
   - component: {fileID: 1777952514090667209}
   - component: {fileID: 3979852298589195045}
+  - component: {fileID: 2605881150801463676}
   m_Layer: 0
   m_Name: TankBody
   m_TagString: Untagged
@@ -162,6 +178,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &2605881150801463676
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5138972409879843118}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -476746044771901990, guid: e0125c4c2ba1f56429e6792538a43cfa, type: 3}
 --- !u!1 &7575528316444205622
 GameObject:
   m_ObjectHideFlags: 0
@@ -218,8 +248,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8388466923582148032}
   - component: {fileID: 5829815187714172607}
-  - component: {fileID: 1817801736135229193}
   - component: {fileID: 1400093969063618422}
+  - component: {fileID: 170835257715364123}
   m_Layer: 0
   m_Name: Tank_1
   m_TagString: Untagged
@@ -260,20 +290,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &1817801736135229193
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9160887433356253050}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -476746044771901990, guid: e0125c4c2ba1f56429e6792538a43cfa, type: 3}
 --- !u!64 &1400093969063618422
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -285,6 +301,21 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -476746044771901990, guid: e0125c4c2ba1f56429e6792538a43cfa, type: 3}
+--- !u!114 &170835257715364123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9160887433356253050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb8f7c976eade1749a8cbb2daaddabe6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Speed: 12
+  m_TurnSpeed: 180
+  m_PlayerNumber: 1
