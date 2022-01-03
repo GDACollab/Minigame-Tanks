@@ -238,6 +238,8 @@ MonoBehaviour:
   projetile_postion: {fileID: 7575528316444205622}
   vfx:
   - {fileID: 263209302922967040, guid: 0e4162e1fbb2bfa458271e2c3dc71d4e, type: 3}
+  m_Fire_transform: {fileID: 0}
+  player: 0
 --- !u!1 &9160887433356253050
 GameObject:
   m_ObjectHideFlags: 0
@@ -251,7 +253,6 @@ GameObject:
   - component: {fileID: 1400093969063618422}
   - component: {fileID: 170835257715364123}
   - component: {fileID: 7137947594673471553}
-  - component: {fileID: 7009664042101992900}
   m_Layer: 0
   m_Name: Tank_1
   m_TagString: Untagged
@@ -417,18 +418,3 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &7009664042101992900
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9160887433356253050}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb8f7c976eade1749a8cbb2daaddabe6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Speed: 12
-  m_TurnSpeed: 180
-  m_PlayerNumber: 1
