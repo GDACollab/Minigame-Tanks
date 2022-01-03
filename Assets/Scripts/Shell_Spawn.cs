@@ -10,7 +10,9 @@ public class Shell_Spawn : MonoBehaviour
     public GameObject projetile_postion;
     public List<GameObject> vfx = new List<GameObject>();
     public Transform m_Fire_transform;
-    private GameObject effectToSpawn;
+    public bool player; // if true player 1 shoots, else if false player 2 shoots
+
+    private GameObject effectToSpawn; //specifed projectile
 
    private void Start()
     {
@@ -21,8 +23,11 @@ public class Shell_Spawn : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        //Condtion is when mouse button pressed
-        if(Input.GetMouseButtonDown(0))
+        if (player == true && Input.GetKeyDown(KeyCode.RightShift))
+        {
+            Spawn_vfx();
+        }
+        else if(player == false && Input.GetKeyDown(KeyCode.LeftShift))
         {
             Spawn_vfx();
         }

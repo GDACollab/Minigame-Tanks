@@ -163,6 +163,7 @@ MonoBehaviour:
   vfx:
   - {fileID: 263209302922967040, guid: 0e4162e1fbb2bfa458271e2c3dc71d4e, type: 3}
   m_Fire_transform: {fileID: 0}
+  player: 1
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -531,6 +532,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3363746955379809436, guid: 8836074d366f65e48a571ca7af266cfd, type: 3}
+      propertyPath: player
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5829815187714172607, guid: 8836074d366f65e48a571ca7af266cfd, type: 3}
       propertyPath: m_Interpolate
       value: 0
